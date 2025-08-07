@@ -1,0 +1,9 @@
+#Sample locators for test environment
+demoUrl: 'https://test-demoqa.com/'
+parabankUrl: 'https://test-parabank.parasoft.com/parabank/index.html'
+reqRes: 'https://test-reqres.in/'
+basicUIDemo: 'https://test-testpages.herokuapp.com/styled/basic-html-form-test.html'
+basicUIDemoAlert: 'https://test-testpages.eviltester.com/styled/alerts/alert-test.html'
+dragAndDropUrl: 'https://test-testpages.eviltester.com/styled/drag-drop-javascript.html'
+keyBoardPage: 'https://the-internet.herokuapp.com/key_presses'
+

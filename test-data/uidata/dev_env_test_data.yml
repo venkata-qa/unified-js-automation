@@ -1,0 +1,8 @@
+#Sample locators
+demoUrl: 'https://demoqa.com/'
+parabankUrl: 'https://parabank.parasoft.com/parabank/index.html'
+reqRes: 'https://reqres.in/'
+basicUIDemo: 'https://testpages.herokuapp.com/styled/basic-html-form-test.html'
+basicUIDemoAlert: 'https://testpages.eviltester.com/styled/alerts/alert-test.html'
+dragAndDropUrl: 'https://testpages.eviltester.com/styled/drag-drop-javascript.html'
+keyBoardPage: 'https://the-internet.herokuapp.com/key_presses'

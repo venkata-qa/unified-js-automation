@@ -1,0 +1,9 @@
+#Sample locators for pre-production environment
+demoUrl: 'https://preprod-demoqa.com/'
+parabankUrl: 'https://preprod-parabank.parasoft.com/parabank/index.html'
+reqRes: 'https://preprod-reqres.in/'
+basicUIDemo: 'https://preprod-testpages.herokuapp.com/styled/basic-html-form-test.html'
+basicUIDemoAlert: 'https://preprod-testpages.eviltester.com/styled/alerts/alert-test.html'
+dragAndDropUrl: 'https://preprod-testpages.eviltester.com/styled/drag-drop-javascript.html'
+keyBoardPage: 'https://the-internet.herokuapp.com/key_presses'
+
