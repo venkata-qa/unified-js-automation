@@ -1,0 +1,55 @@
+version: '3.8'
+
+services:
+  playwright-tests:
+    build: .
+    container_name: playwright-automation
+    environment:
+      - NODE_ENV=${NODE_ENV:-test}
+      - RECORD_VIDEO=${RECORD_VIDEO:-false}
+      - PARALLEL_THREAD=${PARALLEL_THREAD:-2}
+      - BROWSER=${BROWSER:-chromium}
+    volumes:
+      - ./reports:/app/reports
+      - ./logs:/app/logs
+      - ./test-data:/app/test-data
+    ports:
+      - '3000:3000'
+    networks:
+      - test-network
+
+  allure-server:
+    image: frankescobar/allure-docker-service
+    container_name: allure-server
+    environment:
+      CHECK_RESULTS_EVERY_SECONDS: 1
+    ports:
+      - '5050:5050'
+    volumes:
+      - ./reports/allure/results:/app/allure-results
+      - ./reports/allure/reports:/app/default-reports
+    networks:
+      - test-network
+
+  test-db:
+    image: mysql:8.0
+    container_name: test-database
+    environment:
+      MYSQL_ROOT_PASSWORD: testroot
+      MYSQL_DATABASE: testdb
+      MYSQL_USER: testuser
+      MYSQL_PASSWORD: testpass
+    ports:
+      - '3306:3306'
+    volumes:
+      - test-db-data:/var/lib/mysql
+      - ./test-data/db-scripts:/docker-entrypoint-initdb.d
+    networks:
+      - test-network
+
+networks:
+  test-network:
+    driver: bridge
+
+volumes:
+  test-db-data:
