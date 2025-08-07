@@ -1,0 +1,88 @@
+# Core Application Configuration
+NODE_ENV=dev
+DEBUG=false
+CI=false
+
+# Test Execution Configuration
+PARALLEL_THREAD=1
+BROWSER=chromium
+HEADLESS=false
+RECORD_VIDEO=false
+SLOW_MO=0
+
+# Timeout Configuration (in milliseconds)
+TIMEOUT_DURATION=30000
+NAVIGATION_TIMEOUT=30000
+ASSERTION_TIMEOUT=5000
+
+# Retry Configuration
+TEST_RETRIES=0
+SCREENSHOT_MODE=only-on-failure
+TRACE_MODE=on-first-retry
+
+# Reporting Configuration
+ALLURE_RESULTS_DIR=reports/allure/results
+REPORT_PORTAL_ENDPOINT=
+REPORT_PORTAL_TOKEN=
+REPORT_PORTAL_PROJECT=
+
+# Security Configuration
+API_BASE_URL=https://reqres.in
+API_CONTENT_TYPE=application/json
+API_KEY=reqres-free-v1
+API_SECRET=your-api-secret-here
+JWT_SECRET=your-jwt-secret-here
+
+# Application URLs (from your YAML files)
+DEMO_URL=https://demoqa.com/
+PARABANK_URL=https://parabank.parasoft.com/parabank/index.html
+BASIC_UI_DEMO_URL=https://testpages.herokuapp.com/styled/basic-html-form-test.html
+BASIC_UI_ALERT_URL=https://testpages.eviltester.com/styled/alerts/alert-test.html
+DRAG_DROP_URL=https://testpages.eviltester.com/styled/drag-drop-javascript.html
+KEYBOARD_PAGE_URL=https://the-internet.herokuapp.com/key_presses
+
+# Performance Testing (from performanceTests.js)
+PERFORMANCE_TEST_URLS=https://example.com,https://reqres.in,https://demoqa.com,https://parabank.parasoft.com
+PERFORMANCE_REPORT_PATH=./reports/performance-report.json
+REPORTS_DIR=reports
+
+# Cloud Testing Configuration
+BROWSERSTACK_USERNAME=venkata13
+BROWSERSTACK_ACCESS_KEY=XTzDL65rS7Zsq4hQeaNX
+SAUCE_USERNAME=
+SAUCE_ACCESS_KEY=
+
+# Database Configuration
+DB_HOST=localhost
+DB_PORT=3306
+DB_NAME=testdb
+DB_USER=testuser
+DB_PASSWORD=testpass
+
+# Azure DevOps Configuration
+AZURE_ORG=your-org
+AZURE_PROJECT=your-project
+AZURE_PAT=your-personal-access-token
+PLAN_ID=your-plan-id
+SUITE_ID=your-suite-id
+
+# Logging Configuration
+LOG_LEVEL=info
+LOG_TO_FILE=true
+LOG_MAX_SIZE=10MB
+LOG_MAX_FILES=5
+
+# Test Data Management
+TEST_DATA_CACHE=true
+TEST_DATA_REFRESH=24h
+
+# Environment URLs for different environments
+DEV_BASE_URL=https://dev.example.com
+TEST_BASE_URL=https://test.example.com
+STAGING_BASE_URL=https://staging.example.com
+PROD_BASE_URL=https://production.example.com
+
+# Notification Configuration
+SLACK_WEBHOOK=
+TEAMS_WEBHOOK=
+EMAIL_RECIPIENTS=test-team@company.com
